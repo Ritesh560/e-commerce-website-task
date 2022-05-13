@@ -1,0 +1,60 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+.body {
+  margin: 0%;
+  padding: 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 20%;
+}
+.container {
+  overflow: hidden;
+  margin: 0%;
+  padding: 0%;
+  height: 100%;
+  position: relative;
+}
+
+.navbar {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+nav li {
+  display: inline-block;
+  margin: 0% 0.5%;
+  padding: 0% 2px;
+}
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+nav li a:hover {
+  text-decoration: underline;
+}
+.websitelogo {
+  height: 25px;
+  margin-left: 0%;
+}
+.navhome {
+  margin-left: 33%;
+}
+.user {
+  position: absolute;
+  right: 50px;
+}
+
+@media screen and (max-width: 900px) {
+  .navhome {
+    margin-left: 25%;
+  }
+  .user {
+    position: absolute;
+    right: 30px;
+  }
+}

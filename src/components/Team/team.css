@@ -1,0 +1,57 @@
+.navteam {
+  text-decoration: underline;
+}
+
+.teamContainer {
+  margin: 0% 14%;
+}
+.titleline {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.team {
+  overflow: hidden;
+  position: relative;
+  display: inline;
+}
+.profile {
+  width: 180px;
+  height: 280px;
+  margin: 40px 10px;
+  display: inline-block;
+  box-shadow: 2px rgb(110, 103, 103);
+  border: 3px solid rgb(235, 229, 229);
+}
+
+.team-profile-pic {
+  width: 180px;
+  height: 180px;
+  display: inline-block;
+}
+.profile p {
+  margin-top: 3px;
+  padding: 0%;
+  font-size: 12px;
+  text-align: center;
+}
+.name {
+  font-size: 14px;
+  font-weight: bold;
+}
+.social-media {
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.social-media img {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
