@@ -12,7 +12,8 @@
 .contact-emails {
   width: 250px;
   height: auto;
-  border: 2px solid rgb(229, 222, 222);
+
+  box-shadow: 5px 10px 18px #888888;
   padding: 20px 20px;
   margin: 20px;
 }

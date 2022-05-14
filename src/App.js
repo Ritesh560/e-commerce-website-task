@@ -1,13 +1,14 @@
 import React, { useState } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 //import css
 import "./App.css"
 
 //components
 import Nevbar from "./components/navbar/navbar"
-// import Journey from "./components/Journey/journey"
-// import Team from "./components/Team/team"
-//import Contact from "./components/Contact/contact"
+import Journey from "./components/Journey/journey"
+import Team from "./components/Team/team"
+import Contact from "./components/Contact/contact"
 import Filters from "./components/Filters/filters"
 import Products from "./components/products/products"
 import Cart from "./components/Cart/cart"
@@ -15,15 +16,69 @@ import Cart from "./components/Cart/cart"
 function App() {
   const [cart, setCart] = useState([])
 
+  const [priceRange, setPriceRange] = useState({
+    costFilter1: false,
+    costFilter2: false,
+    costFilter3: false,
+  })
+
+  const [type, setType] = useState({
+    loafers: false,
+    sneakers: false,
+  })
+
+  const StorePage = () => {
+    return (
+      <>
+        <Nevbar />
+        <div className="store">
+          <Filters priceRange={priceRange} setPriceRange={setPriceRange} type={type} setType={setType} />
+          <Products cart={cart} setCart={setCart} priceRange={priceRange} type={type} />
+          <Cart cart={cart} />
+        </div>
+      </>
+    )
+  }
+
+  const JourneyPage = () => {
+    return (
+      <>
+        <Nevbar />
+        <Journey />
+      </>
+    )
+  }
+
+  const ContactPage = () => {
+    return (
+      <>
+        <Nevbar />
+        <Contact />
+      </>
+    )
+  }
+
+  const TeamPage = () => {
+    return (
+      <>
+        <Nevbar />
+        <Team />
+      </>
+    )
+  }
+
   return (
-    <>
-      <Nevbar />
-      <div className="store">
-        <Filters />
-        <Products cart={cart} setCart={setCart} />
-        <Cart cart={cart} />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" exact element={<StorePage />} />
+
+        <Route path="/journey" element={<JourneyPage />} />
+
+        <Route path="/team" element={<TeamPage />} />
+
+        <Route path="/contact-us" element={<ContactPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

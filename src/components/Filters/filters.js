@@ -3,7 +3,40 @@ import React from "react"
 //importing css
 import "./filter.css"
 
-function Filters() {
+function Filters({ priceRange, setPriceRange, type, setType }) {
+  const handelPrice = (e) => {
+    if (e.target.value === "1500") {
+      setPriceRange({
+        ...priceRange,
+        costFilter1: !priceRange.costFilter1,
+      })
+    } else if (e.target.value === "4001") {
+      setPriceRange({
+        ...priceRange,
+        costFilter2: !priceRange.costFilter2,
+      })
+    } else if (e.target.value === "7001") {
+      setPriceRange({
+        ...priceRange,
+        costFilter3: !priceRange.costFilter3,
+      })
+    }
+  }
+
+  const handelType = (e) => {
+    if (e.target.value === "loafers") {
+      setType({
+        ...type,
+        loafers: !type.loafers,
+      })
+    } else if (e.target.value === "sneakers") {
+      setType({
+        ...type,
+        sneakers: !type.sneakers,
+      })
+    }
+  }
+
   return (
     <div className="filters">
       <div className="filters-title">
@@ -13,12 +46,12 @@ function Filters() {
 
       <div className="cost-filter">
         <h3>Cost</h3>
-        <input type="checkbox" id="1500" name="1500" value="1500" />
-        <label for="1500">Rs. 1500-4000</label> <br />
-        <input type="checkbox" id="4001" name="4001" value="4001" />
-        <label for="1500">Rs. 4001-7000</label> <br />
-        <input type="checkbox" id="7001" name="7001" value="7001" />
-        <label for="1500">Rs. 7001+</label> <br />
+        <input type="checkbox" id="1500" name="1500" value="1500" onChange={handelPrice} />
+        <label htmlFor="1500">Rs. 1500-4000</label> <br />
+        <input type="checkbox" id="4001" name="4001" value="4001" onChange={handelPrice} />
+        <label htmlFor="4001">Rs. 4001-7000</label> <br />
+        <input type="checkbox" id="7001" name="7001" value="7001" onChange={handelPrice} />
+        <label htmlFor="7001">Rs. 7001+</label> <br />
       </div>
 
       <div className="color-filter">
@@ -35,19 +68,19 @@ function Filters() {
       <div className="design-filter">
         <h3>Design templates</h3>
         <input type="checkbox" value="2" />
-        <label for="1500">2</label> <br />
+        <label htmlFor="2">2</label> <br />
         <input type="checkbox" value="3" />
-        <label for="1500">3</label> <br />
+        <label htmlFor="3">3</label> <br />
         <input type="checkbox" value="3+" />
-        <label for="1500">3+</label> <br />
+        <label htmlFor="4">3+</label> <br />
       </div>
 
       <div className="type-filter">
         <h3>Type</h3>
-        <input type="checkbox" id="loafers" name="loafers" value="loafers" />
-        <label for="1500">Loafers</label> <br />
-        <input type="checkbox" id="sneakers" name="sneakers" value="sneakers" />
-        <label for="1500">Sneakers</label> <br />
+        <input type="checkbox" id="loafers" name="loafers" value="loafers" onClick={handelType} />
+        <label htmlFor="loafers">Loafers</label> <br />
+        <input type="checkbox" id="sneakers" name="sneakers" value="sneakers" onClick={handelType} />
+        <label htmlFor="sneakers">Sneakers</label> <br />
       </div>
 
       <input type="button" className="apply-filter" value="apply" />

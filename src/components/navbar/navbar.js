@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 import "./navbar.css"
 
@@ -14,19 +15,20 @@ function Nevbar() {
             <img className="websitelogo" src={websiteLogo} alt="#" />
           </li>
           <li className="navhome">
-            <a href="#Home">Home</a>
+            <Link to="/" />
+            Home
           </li>
           <li className="navjourney">
-            <a href="#journey">The Journey</a>
+            <Link to="/journey">The Journey</Link>
           </li>
           <li className="navteam">
-            <a href="#team">Team</a>
+            <Link to="/team">Team</Link>
           </li>
           <li className="navstore">
-            <a href="#store">Store</a>
+            <Link to="/">Store</Link>
           </li>
           <li className="navcontact">
-            <a href="#Contact">Contact</a>
+            <Link to="/contact-us">Contact</Link>
           </li>
           <li className="user">GAGAN</li>
         </ul>

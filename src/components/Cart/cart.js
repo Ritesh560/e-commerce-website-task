@@ -34,6 +34,8 @@ function Card({ cart }) {
         <div className="location">
           <img src={location} alt="#" className="icon" />
           <p>Home</p>
+        </div>
+        <div className="date">
           <img src={calendar} alt="#" className="icon" />
           <p>select date</p>
         </div>
