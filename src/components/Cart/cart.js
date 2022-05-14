@@ -8,15 +8,26 @@ import calendar from "../../assets/calendar.png"
 import location from "../../assets/location.png"
 import shoppingCard from "../../assets/shopping-cart.png"
 
-function Card() {
+function Card({ cart }) {
   return (
     <div className="cart">
       <div className="cart-title">
         <h3>CART</h3>
         <img className="icon cart-icon" src={shoppingCard} alt="#" />
       </div>
-      <div className="cart-empty">
-        <p>what's stopping you, designer?</p>
+      <div className={cart.length === 0 ? "cart-empty" : "cart-notempty"}>
+        {cart.length === 0 ? (
+          <p className="empty-card-msg">what's stopping you, designer?</p>
+        ) : (
+          cart.map((item) => {
+            return (
+              <div key={item.key} className="cart-items">
+                <p className="cart-item-name">{item.pro_name}</p>
+                <p className="cart-item-price">Rs. {item.price}</p>
+              </div>
+            )
+          })
+        )}
       </div>
 
       <div className="location-date">

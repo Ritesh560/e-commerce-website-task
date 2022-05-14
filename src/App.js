@@ -1,4 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
+
+//import css
+import "./App.css"
 
 //components
 import Nevbar from "./components/navbar/navbar"
@@ -10,13 +13,15 @@ import Products from "./components/products/products"
 import Cart from "./components/Cart/cart"
 
 function App() {
+  const [cart, setCart] = useState([])
+
   return (
     <>
+      <Nevbar />
       <div className="store">
-        <Nevbar />
         <Filters />
-        <Products />
-        <Cart />
+        <Products cart={cart} setCart={setCart} />
+        <Cart cart={cart} />
       </div>
     </>
   )
