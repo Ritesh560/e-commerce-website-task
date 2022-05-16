@@ -48,7 +48,7 @@ nav li a:hover {
 
 .nav-links {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
   padding: 0px;
   margin: 0%;
 }

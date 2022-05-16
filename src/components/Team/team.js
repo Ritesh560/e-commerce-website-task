@@ -70,6 +70,8 @@ function Team() {
           </div>
         </div>
       </div>
+
+      <h2>and You! ;)</h2>
     </div>
   )
 }

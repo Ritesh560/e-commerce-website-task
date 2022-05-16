@@ -16,7 +16,7 @@ function Nevbar() {
             <img className="websitelogo" src={websiteLogo} alt="#" />
           </li>
 
-          <div className="nav-links">
+          <div className="nav-links navigation">
             <li className="navhome">
               <Link to="/">Home</Link>
             </li>
