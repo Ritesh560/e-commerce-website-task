@@ -34,7 +34,7 @@ function App() {
         <div className="store">
           <Filters priceRange={priceRange} setPriceRange={setPriceRange} type={type} setType={setType} />
           <Products cart={cart} setCart={setCart} priceRange={priceRange} type={type} />
-          <Cart cart={cart} />
+          <Cart cart={cart} setCart={setCart} />
         </div>
       </>
     )
@@ -67,10 +67,21 @@ function App() {
     )
   }
 
+  const Home = () => {
+    return (
+      <>
+        <Nevbar />
+        <h1>HOME</h1>
+      </>
+    )
+  }
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" exact element={<StorePage />} />
+        <Route path="/" element={<Home />} />
+
+        <Route path="/store" exact element={<StorePage />} />
 
         <Route path="/journey" element={<JourneyPage />} />
 

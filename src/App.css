@@ -1,3 +1,6 @@
+.store {
+  margin-top: 30px;
+}
 @media screen and (min-width: 1700px) {
   .products-container {
     display: grid;
@@ -40,5 +43,9 @@
   .location,
   .date {
     margin: 5px 0px;
+  }
+  .store {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }

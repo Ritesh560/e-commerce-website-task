@@ -1,7 +1,7 @@
 .store-items {
-  border: 2px solid black;
   padding: 0% 2%;
-  margin-left: 2px;
+  margin-left: 10px;
+  box-shadow: 1px 10px 18px #888888;
 }
 .items-nav {
   position: relative;
@@ -25,13 +25,14 @@
 
 .products-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, 180px);
 }
 
 .product {
   margin: 0%;
   padding: 0%;
   margin-right: 2%;
+  width: 180px;
 }
 
 .product-image {
@@ -73,47 +74,21 @@
   width: 50px;
 }
 
-@media screen and (min-width: 1700px) {
+/* @media screen and (min-width: 1700px) {
   .products-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-  .date img,
-  .location img {
-    width: 16px;
-    margin-left: auto;
-    margin-right: 10px;
-    padding: 0%;
-  }
-}
+} */
 
-@media screen and (max-width: 1100px) {
+/* @media screen and (max-width: 1100px) {
   .products-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .color-boxes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .filters-title {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-@media screen and (max-width: 900px) {
-  .filters-title i {
-    position: absolute;
-    left: 10%;
-    top: 55px;
-    margin-bottom: 20px;
-  }
-  .location-date {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .location,
-  .date {
-    margin: 5px 0px;
+} */
+@media screen and (max-width: 970px) {
+  .store-items {
+    margin: 20px;
   }
 }

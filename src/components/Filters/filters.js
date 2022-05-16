@@ -5,6 +5,7 @@ import "./filter.css"
 
 function Filters({ priceRange, setPriceRange, type, setType }) {
   const handelPrice = (e) => {
+    e.preventDefault()
     if (e.target.value === "1500") {
       setPriceRange({
         ...priceRange,
@@ -46,11 +47,11 @@ function Filters({ priceRange, setPriceRange, type, setType }) {
 
       <div className="cost-filter">
         <h3>Cost</h3>
-        <input type="checkbox" id="1500" name="1500" value="1500" onChange={handelPrice} />
+        <input type="checkbox" id="1500" name="1500" value="1500" checked={priceRange.costFilter1} onChange={handelPrice} />
         <label htmlFor="1500">Rs. 1500-4000</label> <br />
-        <input type="checkbox" id="4001" name="4001" value="4001" onChange={handelPrice} />
+        <input type="checkbox" id="4001" name="4001" value="4001" checked={priceRange.costFilter2} onChange={handelPrice} />
         <label htmlFor="4001">Rs. 4001-7000</label> <br />
-        <input type="checkbox" id="7001" name="7001" value="7001" onChange={handelPrice} />
+        <input type="checkbox" id="7001" name="7001" value="7001" checked={priceRange.costFilter3} onChange={handelPrice} />
         <label htmlFor="7001">Rs. 7001+</label> <br />
       </div>
 
@@ -77,9 +78,9 @@ function Filters({ priceRange, setPriceRange, type, setType }) {
 
       <div className="type-filter">
         <h3>Type</h3>
-        <input type="checkbox" id="loafers" name="loafers" value="loafers" onClick={handelType} />
+        <input type="checkbox" id="loafers" name="loafers" value="loafers" checked={type.loafers} onClick={handelType} />
         <label htmlFor="loafers">Loafers</label> <br />
-        <input type="checkbox" id="sneakers" name="sneakers" value="sneakers" onClick={handelType} />
+        <input type="checkbox" id="sneakers" name="sneakers" value="sneakers" checked={type.sneakers} onClick={handelType} />
         <label htmlFor="sneakers">Sneakers</label> <br />
       </div>
 

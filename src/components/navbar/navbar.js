@@ -15,8 +15,7 @@ function Nevbar() {
             <img className="websitelogo" src={websiteLogo} alt="#" />
           </li>
           <li className="navhome">
-            <Link to="/" />
-            Home
+            <Link to="/">Home</Link>
           </li>
           <li className="navjourney">
             <Link to="/journey">The Journey</Link>
@@ -25,7 +24,7 @@ function Nevbar() {
             <Link to="/team">Team</Link>
           </li>
           <li className="navstore">
-            <Link to="/">Store</Link>
+            <Link to="/store">Store</Link>
           </li>
           <li className="navcontact">
             <Link to="/contact-us">Contact</Link>
