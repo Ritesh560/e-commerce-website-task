@@ -16,17 +16,20 @@ body {
   padding: 0%;
   height: 100%;
   position: relative;
+  margin-top: 10px;
 }
 
 .navbar {
-  width: 100%;
+  width: 90%;
+  margin: 0% auto;
 }
 
 ul {
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
 }
 nav li {
-  display: inline-block;
   margin: 0% 0.5%;
   padding: 0% 2px;
 }
@@ -42,12 +45,23 @@ nav li a:hover {
   height: 25px;
   margin-left: 0%;
 }
+
+.nav-links {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0px;
+  margin: 0%;
+}
+
 .navhome {
   margin-left: 33%;
 }
 .user {
   position: absolute;
   right: 50px;
+}
+.user-icon {
+  width: 15px;
 }
 
 @media screen and (max-width: 900px) {

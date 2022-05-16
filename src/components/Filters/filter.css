@@ -3,6 +3,7 @@
   margin-left: 10%;
   margin-right: 10%;
   grid-template-columns: 1fr 2fr 1fr;
+  margin-bottom: 20px;
 }
 
 .filters {
@@ -17,7 +18,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.filters-title i {
+.filters-title img {
+  width: 25px;
   position: absolute;
   right: 10%;
   top: 25px;
@@ -65,10 +67,10 @@
   background-color: rgb(14, 235, 209);
 }
 
-.design-filter h3 {
+h3 {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-size: 80%;
+  font-size: 90%;
 }
 
 .type-filter h3 {

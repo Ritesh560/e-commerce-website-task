@@ -3,6 +3,8 @@ import React from "react"
 //importing css
 import "./filter.css"
 
+import filter_icon from "../../assets/filter-solid.svg"
+
 function Filters({ priceRange, setPriceRange, type, setType }) {
   const handelPrice = (e) => {
     e.preventDefault()
@@ -42,7 +44,7 @@ function Filters({ priceRange, setPriceRange, type, setType }) {
     <div className="filters">
       <div className="filters-title">
         <h2>FILTERS</h2>
-        <i className="fa-solid fa-filter"></i>
+        <img src={filter_icon} alt="#" classsName="icon" />
       </div>
 
       <div className="cost-filter">
